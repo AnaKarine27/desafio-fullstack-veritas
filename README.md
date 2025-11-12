@@ -7,8 +7,6 @@ A aplicação permite **criar, ler, atualizar e excluir (CRUD)** tarefas, movend
 
 O **frontend** é construído em **React** e o **backend** em **Go**.
 
----
-
 ## Índice
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
 - [Como Rodar o Projeto Localmente](#como-rodar-o-projeto-localmente)
@@ -17,14 +15,10 @@ O **frontend** é construído em **React** e o **backend** em **Go**.
 - [Decisões Técnicas](#decisões-técnicas)
 - [Limitações e Melhorias Futuras](#limitações-e-melhorias-futuras)
 
----
-
 ## Tecnologias Utilizadas
 **Backend:** Go (utilizando a biblioteca padrão `net/http` e `google/uuid`)  
 **Frontend:** React (Vite) + Context API  
 **Armazenamento:** Em memória (thread-safe com `sync.Mutex`) com persistência em arquivo JSON.
-
----
 
 ## Como Rodar o Projeto Localmente
 
