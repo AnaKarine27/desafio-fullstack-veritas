@@ -24,7 +24,18 @@ O **frontend** é construído em **React** e o **backend** em **Go**.
 
 Você precisará ter **Go (v1.2x+)** e **Node.js (v18+)** instalados.
 
-### 1. Backend (Go)
+### 1. Clone o Repositório
+
+```
+# Em seu terminal, clone este repositório
+git clone https://github.com/AnaKarine27/desafio-fullstack-veritas.git
+
+# Acesse a pasta do projeto
+cd desafio-fullstack-veritas
+
+```
+
+### 2. Backend (Go)
 Em um terminal, navegue até a pasta do backend e rode os comandos abaixo:
 
 ```bash
@@ -42,7 +53,7 @@ go run main.go handlers.go models.go
 
 O servidor estará rodando em:  http://localhost:3333
 ```
-### 2. Frontend (React)
+### 3. Frontend (React)
 Em outro terminal, navegue até a pasta do frontend e rode:
 
 ```bash
@@ -73,12 +84,16 @@ Algumas decisões tomadas durante o desenvolvimento:
 
 - Criação de hook customizado ``(useTaskContext)`` para consumir o contexto, tornando componentes como ``KanbanBoard`` e ``TaskCard`` mais limpos.
 
-- Validação de status:
+**Gerenciamento de Status no Formulário**  
 
-    No frontend, via ``<select>`` no TaskFormModal.jsx.
+O desafio exige validação de status. Para atender a isso e focar em uma UX intuitiva, a validação foi implementada em duas camadas:
 
-    No backend, via validação no handlers.go.
+- **Frontend:** No ``TaskFormModal``, foi incluído um campo ``<select>`` para o Status. Esta é uma decisão pensada na UX:  
+    **Previne Erros:** Impede que o usuário digite um status inválido, guiando-o para as escolhas corretas.  
+    **Flexibilidade na Criação:** Permite ao usuário criar uma tarefa e já defini-la como "Em Progresso" ou "Concluída", em vez de forçá-lo a criar e depois movê-la.  
+    **Eficiência na Edição:** Permite alterar o título, a descrição e o status de uma vez só, sem precisar fechar o modal e usar o botão "Mover".
 
+- **Backend:** O ``handlers.go`` implementa uma segunda camada de validação, garantindo a integridade dos dados caso a API seja chamada diretamente.
 
 ## Limitações e Melhorias Futuras
 
