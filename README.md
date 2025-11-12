@@ -10,8 +10,6 @@ O **frontend** é construído em **React** e o **backend** em **Go**.
 ## Índice
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
 - [Como Rodar o Projeto Localmente](#como-rodar-o-projeto-localmente)
-  - [Backend (Go)](#1-backend-go)
-  - [Frontend (React)](#2-frontend-react)
 - [Decisões Técnicas](#decisões-técnicas)
 - [Limitações e Melhorias Futuras](#limitações-e-melhorias-futuras)
 
